@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+float degree;
+float radian;
+float x;
+float rad(float *ptr)
+{
+   // if(x==4)
+   // {
+        float sinx;
+       // cout<<"Enter Value in Radian if the value is not in Radian then enter 4 to convert into Degree "<<endl;
+       // cin>>*ptr;
+        sinx=(*ptr-*ptr**ptr**ptr/6+*ptr**ptr**ptr**ptr**ptr/120);
+        cout<<"Value of sin x: "<<sinx;
+        return 0;
+   // }
+}
+
+float deg(int x)
+{
+    //if(x==4)
+    //{
+        cout<<"Enter Value to convert it to Radian"<<endl;
+        cin>>degree;
+        radian=(degree*3.14/180);
+        cout<<"Value in Radian: "<<radian<<endl;;
+        float *ptr=&radian;
+        rad(&radian);
+        return radian;
+    //}
+}
+
+int main() 
+{
+    float sinx;
+    float cosx;
+    float ex;
+    cout<<"Enter 1 for to calculate sinx value"<<endl;
+    cout<<"Enter 2 for to calculate cosx"<<endl;
+    cout<<"Enter 3 for to calculate e^x value"<<endl;
+    cout<<"Enter 0 for to calculate sinx in radian"<<endl;
+    cin>>x;
+
+    if(x==1)
+    {
+        cout<<"Enter Value in Radian if the value is not in Radian then enter 0 to convert into Degree "<<endl;
+        cin>>sinx;
+            if(sinx==0)
+            {
+                deg(x);
+            }
+            else
+            {
+                sinx=(sinx-sinx*sinx*sinx/6+sinx*sinx*sinx*sinx*sinx/120);
+                cout<<"Value of sin x: "<<sinx;
+            }
+    }
+    else if(x==0)
+    {
+        deg(x);
+    }
+        
+    else if(x==4)
+    {
+        deg(x);
+    }
+
+    else if(x==2)
+    {
+        cin>>cosx;
+        cosx=(1-cosx*cosx/2+cosx*cosx*cosx*cosx/24);
+        cout<<cosx;
+    }
+
+    else if(x==3)
+    {
+        cin>>ex;
+        ex=(1+ex+ex*ex/2+ex*ex*ex/6+ex*ex*ex*ex/24);
+        cout<<ex;
+    }
+
+    return 0;
+}
